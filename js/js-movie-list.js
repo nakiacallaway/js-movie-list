@@ -57,7 +57,7 @@ const movieDetails = () => {
 // Part One Number 3
 
 const addMovie = (title, description, year, genre, imdbRating) => {
-    movies.unshift(movie = {title, description, year, genre, imdbRating});
+    movies.push(movie = {title, description, year, genre, imdbRating});
 }
 
 addMovie("Paprika",
