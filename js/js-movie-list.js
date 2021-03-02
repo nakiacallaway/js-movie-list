@@ -60,11 +60,19 @@ const addMovie = (title, description, year, genre, imdbRating) => {
     movies.push(movie = {title, description, year, genre, imdbRating});
 }
 
-addMovie("Paprika",
-"When a machine that allows therapists to enter their patients' dreams is stolen, all Hell breaks loose. Only a young female therapist, Paprika, can stop it.",
-2006, ['Animation', 'Drama', 'Fantasy'], 7.7);
+addMovie("Paprika", 
+"When a machine that allows therapists to enter their patients' dreams is stolen, all Hell breaks loose. Only a young female therapist, Paprika, can stop it.", 
+2006, 
+['Animation', 'Drama', 'Fantasy'], 
+7.7);
 
-// console.log(movies);
+addMovie("Tokyo Godfathers",
+"On Christmas Eve, three homeless people living on the streets of Tokyo discover a newborn baby among the trash and set out to find its parents.",
+2003,
+['Animation', 'Adventure', 'Comedy'],
+7.8);
+
+console.log(movies);
 
 
 
