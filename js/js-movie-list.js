@@ -1,5 +1,6 @@
-const movies = [
+let movies = [
     {
+        id: 0,
         name: "Howl's Moving Castle",
         year: 2004,
         genre: ['Animation', 'Adventure', 'Family'],
@@ -7,6 +8,7 @@ const movies = [
         imdbRating: 8.2
     },
     {
+        id: 1,
         name: "Spirited Away",
         year: 2001,
         genre: ['Animation', 'Adventure', 'Family'],
@@ -14,6 +16,7 @@ const movies = [
         imdbRating: 8.6
     },
     {
+        id: 2,
         name: "Final Fantasy VII: Advent Children",
         year: 2005,
         genre: ['Animation', 'Action', 'Adventure'],
@@ -21,6 +24,7 @@ const movies = [
         imdbRating: 7.2
     },
     {
+        id: 3,
         name: "Violet Evergarden: The Movie",
         year: 2020,
         genre: ['Animation', 'Drama', 'Fantasy'],
@@ -28,6 +32,7 @@ const movies = [
         imdbRating: 8.3
     },
     {
+        id: 4,
         name: "Hetalia: Axis Powers - Paint It, White!",
         year: 2010,
         genre: ['Animation, Adventure, Comedy'],
@@ -55,8 +60,11 @@ const titleDetails = () => {
 
 // Part One Number 3
 
+let id = 5;
+
 const addMovie = (title, description, year, genre, imdbRating) => {
-    movies.push(movie = {title, description, year, genre, imdbRating});
+    movies.push(movie = {id, title, description, year, genre, imdbRating});
+    id += 1;
 }
 
 addMovie("Paprika", 
@@ -73,6 +81,26 @@ addMovie("Tokyo Godfathers",
 
 console.log(movies);
 
+// const removeMovie = (movieTitle) => {
+//     // debugger;
+//     let filteredMovies = movies.filter(movie => {
+//         return movie.name != movieTitle;
+//     });
+//     movies = filteredMovies;
+// }
 
+// removeMovie("Paprika");
+// removeMovie("Spirited Away");
+// removeMovie("Howl's Moving Castle");
 
+const removeMovie = (movieId) => {
+    // debugger;
+    movies.splice(movieId, 1);
+}
+
+removeMovie(5);
+removeMovie(2);
+removeMovie(1);
+
+console.log(movies);
 
