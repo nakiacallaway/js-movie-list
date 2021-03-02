@@ -36,22 +36,21 @@ const movies = [
     }
 ];
 
-// Loop and console details
-const movieDetails = () => {
-    movies.forEach(m => {
-      console.log(`My movie title is ${m.name} and it came out in ${m.year}`);
-    });
-  };
-  movieDetails();
+
   // Loop and find an instance by a parameter
-  const titleDetails = movieTitle => {
-   let foundMovie = movies.find(movie => movie.name === movieTitle);
-    if (foundMovie) console.log(foundMovie);
-    else console.log(`Could not find ${movieTitle}`);
-  };
-  titleDetails("Howl's Moving Castle");
-  titleDetails('Spirited Away');
-  titleDetails('Violet Evergarden: The Movie');
+const titleDetails = () => {
+
+    const movieTitle = prompt("Which movie do you want to see details for?");
+
+    let foundMovie = JSON.stringify(movies.find(movie => movie.name === movieTitle));
+    
+    if (foundMovie) alert(foundMovie);
+    else alert(`Could not find ${movieTitle}`);
+};
+
+titleDetails("Howl's Moving Castle");
+titleDetails('Spirited Away');
+titleDetails('Violet Evergarden: The Movie');
 
 
 // Part One Number 3
