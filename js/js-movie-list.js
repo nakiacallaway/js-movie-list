@@ -48,9 +48,9 @@ const titleDetails = () => {
     else alert(`Could not find ${movieTitle}`);
 };
 
-titleDetails("Howl's Moving Castle");
-titleDetails('Spirited Away');
-titleDetails('Violet Evergarden: The Movie');
+// titleDetails("Howl's Moving Castle");
+// titleDetails('Spirited Away');
+// titleDetails('Violet Evergarden: The Movie');
 
 
 // Part One Number 3
