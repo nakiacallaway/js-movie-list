@@ -52,3 +52,20 @@ const movieDetails = () => {
   titleDetails("Howl's Moving Castle");
   titleDetails('Spirited Away');
   titleDetails('Violet Evergarden: The Movie');
+
+
+// Part One Number 3
+
+const addMovie = (title, description, year, genre, imdbRating) => {
+    movies.unshift(movie = {title, description, year, genre, imdbRating});
+}
+
+addMovie("Paprika",
+"When a machine that allows therapists to enter their patients' dreams is stolen, all Hell breaks loose. Only a young female therapist, Paprika, can stop it.",
+2006, ['Animation', 'Drama', 'Fantasy'], 7.7);
+
+// console.log(movies);
+
+
+
+
