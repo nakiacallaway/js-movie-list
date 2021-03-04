@@ -62,8 +62,8 @@ const titleDetails = () => {
 
 let id = 5;
 
-const addMovie = (title, description, year, genre, imdbRating) => {
-    movies.push(movie = {id, title, description, year, genre, imdbRating});
+const addMovie = (name, description, year, genre, imdbRating) => {
+    movies.push(movie = {id, name, description, year, genre, imdbRating});
     id += 1;
 }
 
