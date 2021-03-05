@@ -1,7 +1,7 @@
 let movies = [
     {
         id: 0,
-        name: "Howl's Moving Castle",
+        name: "Howls Moving Castle",
         year: 2004,
         genre: ['Animation', 'Adventure', 'Family'],
         description: "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
@@ -41,17 +41,25 @@ let movies = [
     }
 ];
 
+const alertMovieDetails = movieTitle => {
+    let foundMovie = movies.find(movie => {
+    return movie.name === movieTitle;
+    });
+    if (foundMovie) {
+    alert(`${foundMovie.name}: ${foundMovie.description}`);
+    } else {
+    alert('Movie was not found :(');
+    }
+};
 
   // Loop and find an instance by a parameter
-const titleDetails = () => {
-
-    const movieTitle = prompt("Which movie do you want to see details for?");
-
-    let foundMovie = JSON.stringify(movies.find(movie => movie.name === movieTitle));
+// const titleDetails = () => {
+//     const movieTitle = prompt("Which movie do you want to see details for?");
+//     let foundMovie = JSON.stringify(movies.find(movie => movie.name === movieTitle));
     
-    if (foundMovie) alert(foundMovie);
-    else alert(`Could not find ${movieTitle}`);
-};
+//     if (foundMovie) alert(`${foundMovie.name}`);
+//     else alert(`Could not find ${movieTitle}`);
+// };
 
 // titleDetails("Howl's Moving Castle");
 // titleDetails('Spirited Away');
@@ -91,16 +99,10 @@ console.log(movies);
 
 // removeMovie("Paprika");
 // removeMovie("Spirited Away");
-// removeMovie("Howl's Moving Castle");
+// console.log(movies);
 
-const removeMovie = (movieId) => {
-    // debugger;
-    movies.splice(movieId, 1);
-}
-
-removeMovie(5);
-removeMovie(2);
-removeMovie(1);
-
-console.log(movies);
-
+/* Devalued due to correcting add movie function.  Switched back to name based removal. */ 
+// const removeMovie = (movieId) => {
+//     // debugger;
+//     movies.splice(movieId, 1);
+// }
